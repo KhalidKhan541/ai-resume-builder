@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Builder - Free Online Resume Creator</title>
+    <meta name="description" content="Create a professional resume in minutes with AI Resume Builder. Free online resume maker with PDF export, modern templates, and live preview. No sign-up required.">
+    <meta name="keywords" content="resume builder, free resume maker, AI resume, CV creator, resume generator, PDF resume, professional resume">
+    <meta name="author" content="AI Resume Builder">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI Resume Builder - Free Online Resume Creator">
+    <meta property="og:description" content="Create a professional resume in minutes with AI. Free online resume maker with PDF export, modern templates, and live preview.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-resume-builder-3ta.pages.dev">
+    <meta property="og:image" content="https://ai-resume-builder-3ta.pages.dev/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Resume Builder - Free Online Resume Creator">
+    <meta name="twitter:description" content="Create a professional resume in minutes with AI. Free online resume maker with PDF export.">
+    <link rel="canonical" href="https://ai-resume-builder-3ta.pages.dev">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- AdSense Ad Unit -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8007430228126096" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>AI Resume Builder</h1>
+            <p>Create stunning, professional resumes in minutes with AI-powered suggestions</p>
+        </div>
+    </header>
+
+    <!-- Main App -->
+    <main class="app-container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Build Your Resume</h2>
+            
+            <form id="resumeForm">
+                <!-- Personal Info -->
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="+1 (555) 123-4567" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="summary">Professional Summary</label>
+                    <textarea id="summary" rows="4" placeholder="A brief summary about your professional background and goals..."></textarea>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="section-header">
+                    <h3>Work Experience</h3>
+                    <button type="button" class="add-btn" id="addExperience">+ Add Experience</button>
+                </div>
+                <div id="experienceContainer">
+                    <div class="experience-entry">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Job Title</label>
+                                <input type="text" class="exp-title" placeholder="Software Engineer" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text" class="exp-company" placeholder="Tech Corp" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <input type="text" class="exp-start" placeholder="Jan 2020" required>
+                            </div>
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <input type="text" class="exp-end" placeholder="Present">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="exp-desc" rows="3" placeholder="Key achievements and responsibilities..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section-header">
+                    <h3>Education</h3>
+                    <button type="button" class="add-btn" id="addEducation">+ Add Education</button>
+                </div>
+                <div id="educationContainer">
+                    <div class="education-entry">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Degree</label>
+                                <input type="text" class="edu-degree" placeholder="Bachelor of Science" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Institution</label>
+                                <input type="text" class="edu-school" placeholder="University of Technology" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Year</label>
+                                <input type="text" class="edu-year" placeholder="2016 - 2020">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" rows="3" placeholder="JavaScript, React, Node.js, Python, SQL..."></textarea>
+                </div>
+            </form>
+        </section>
+
+        <!-- Preview Section -->
+        <section class="preview-section">
+            <h2>Live Preview</h2>
+            <div class="resume-preview" id="resumePreview">
+                <div class="resume-header">
+                    <h1 class="resume-name" id="previewName">Your Name</h1>
+                    <div class="resume-contact">
+                        <span id="previewEmail">email@example.com</span>
+                        <span id="previewPhone">+1 (555) 000-0000</span>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Professional Summary</h3>
+                    <p id="previewSummary">Your professional summary will appear here...</p>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Work Experience</h3>
+                    <div id="previewExperience">
+                        <div class="experience-item">
+                            <div class="exp-header">
+                                <strong>Job Title</strong>
+                                <span class="date">Company | Date</span>
+                            </div>
+                            <p>Description of your role and achievements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Education</h3>
+                    <div id="previewEducation">
+                        <div class="education-item">
+                            <strong>Degree</strong>
+                            <span class="date">Institution | Year</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3>Skills</h3>
+                    <p id="previewSkills">Your skills will appear here...</p>
+                </div>
+            </div>
+
+            <button class="download-btn" id="downloadBtn">
+                📄 Download PDF
+            </button>
+        </section>
+    </main>
+
+    <!-- Paywall Modal -->
+    <div class="modal-overlay" id="paywallModal">
+        <div class="modal">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2>Unlock Unlimited Downloads</h2>
+            <p>You've used your free download! Enter your email to unlock unlimited PDF exports for just $5.</p>
+            
+            <form id="paywallForm">
+                <div class="form-group">
+                    <input type="email" id="paywallEmail" placeholder="Enter your email" required>
+                </div>
+                <button type="submit" class="pay-btn">Pay $5 & Unlock</button>
+            </form>
+            
+            <p class="modal-note">🔒 Secure payment powered by Stripe</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Powered by AI Resume Builder</p>
+        <p class="copyright">&copy; 2026 All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

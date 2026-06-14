@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ai-resume-builder-3ta.pages.dev/sitemap.xml

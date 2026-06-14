@@ -1,0 +1,12 @@
+{
+  "name": "ai-resume-builder",
+  "version": "1.0.0",
+  "description": "AI-powered resume builder with PDF export",
+  "scripts": {
+    "dev": "npx wrangler pages dev public",
+    "deploy": "npx wrangler pages deploy public --project-name ai-resume-builder"
+  },
+  "keywords": ["resume", "builder", "pdf", "ai"],
+  "author": "",
+  "license": "MIT"
+}
